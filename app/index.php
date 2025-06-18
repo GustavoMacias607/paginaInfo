@@ -1,19 +1,3 @@
-<?php
-session_start();
-// funcionalidad de cierre de sesion
-if (isset($_GET['x']) && $_GET['x'] == 1) {
-    unset($_SESSION);
-    session_destroy();
-    header("Location: ../index.php");
-    die();
-}
-// funcionalidad para validar sesion iniciada
-if (!isset($_SESSION['idusuario'])) {
-
-    header("Location: ../");
-    die();
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 
